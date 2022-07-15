@@ -8,6 +8,8 @@ const getLogInPage = (req, res) => {
     res.status(200).sendFile(path.join(__dirname + "/../views/login.html"));
 }
 
+var isLoggedIn = false;
+
 const postUserLogin = (req, res) => {
 
     const errors = validationResult(req);
@@ -34,6 +36,9 @@ const postUserLogin = (req, res) => {
             bcrypt.compare(password, hash, (err, result) => {
 
                 if (result == true) {
+
+                    isLoggedIn = false;
+                    
                     // generate jwt
                     let jwtSecretKey = process.env.JWT_SECRET_KEY;
 
@@ -70,4 +75,4 @@ const postUserLogin = (req, res) => {
 
 }
 
-module.exports = { getLogInPage, postUserLogin };
+module.exports = { getLogInPage, postUserLogin, isLoggedIn };
