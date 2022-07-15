@@ -22,9 +22,9 @@ router.get("/blogpost", checkLogin, CheckCache(15), getBlogpost);
 router.get("/blogpost/:username", checkLogin, CheckCache(15),getSpecificUserBlogpost);
 
 // update news
-router.put("/blogpost/:blogid", checkLogin, updateBlogPost);
+router.put("/blogpost", checkLogin, updateBlogPost);
 
 // delete news
-router.delete("/blogpost/:blogid", checkLogin, deleteBlogPost);
+router.delete("/blogpost", checkLogin, deleteBlogPost);
 
 module.exports = router;
