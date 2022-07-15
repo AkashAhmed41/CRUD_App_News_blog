@@ -61,7 +61,7 @@ const getBlogpost = (req, res) => {
 
     let username = req.username;
 
-    var query = "SELECT title, content FROM tbl_blog NATURAL JOIN tbl_user WHERE username = ?";
+    var query = "SELECT blogid, title, content FROM tbl_blog NATURAL JOIN tbl_user WHERE username = ?";
 
     db.query(query, [username], (err, rows, fields) => {
         if (!err) {
@@ -106,11 +106,11 @@ const getSpecificUserBlogpost = (req, res) => {
 
 const updateBlogPost = (req, res) => {
 
-    let blogid = req.params.blogid;
+    // let blogid = req.params.blogid;
 
     const userid = req.userid;
 
-    let { title, content } = req.body;
+    let {blogid, title, content } = req.body;
     let updatetime = new Date();
 
     query = "SELECT * FROM tbl_blog WHERE blogid = ?";
@@ -146,7 +146,7 @@ const updateBlogPost = (req, res) => {
 
 const deleteBlogPost = (req, res) => {
 
-    var blogid = req.params.blogid;
+    var blogid = req.body.blogid;
     const userid = req.userid;
 
     query = "SELECT * FROM tbl_blog WHERE blogid = ?";
@@ -184,4 +184,3 @@ const deleteBlogPost = (req, res) => {
 };
 
 module.exports = { getBlogPostPage, postBlogPost, getAllBlogpost, getBlogpost, updateBlogPost, deleteBlogPost, getSpecificUserBlogpost };
-
