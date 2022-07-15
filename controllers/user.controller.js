@@ -3,8 +3,11 @@ const bcrypt = require("bcrypt");
 const { body, validationResult } = require("express-validator")
 
 const path = require("path");
+const { isLoggedIn } = require("./logIn.controller");
 
 const getHome = (req, res) => {
+    if(isLoggedIn){"Login first"}
+    
     res.sendFile(path.join(__dirname + "/../views/home.html"));
 };
 
