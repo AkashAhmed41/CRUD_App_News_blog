@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
     if(res.headerSent){
         return next(err);
     }
-    res.status(500).json({
+    res.status(401).json({
         "message": err,
     });
 });
