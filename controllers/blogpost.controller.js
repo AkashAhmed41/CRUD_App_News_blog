@@ -26,7 +26,7 @@ const postBlogPost = (req, res) => {
                 result
             });
         }
-        else {            
+        else {
             // console.log(err);
             res.status(400).json({
                 "message": "Post share failed!",
@@ -110,7 +110,7 @@ const updateBlogPost = (req, res) => {
 
     const userid = req.userid;
 
-    let {blogid, title, content } = req.body;
+    let { blogid, title, content } = req.body;
     let updatetime = new Date();
 
     query = "SELECT * FROM tbl_blog WHERE blogid = ?";
@@ -146,12 +146,12 @@ const updateBlogPost = (req, res) => {
 
 const deleteBlogPost = (req, res) => {
 
-    var blogid = req.body.blogid;
+    let { blogid } = req.body
+
     const userid = req.userid;
 
     query = "SELECT * FROM tbl_blog WHERE blogid = ?";
     db.query(query, [blogid], (err, result) => {
-
 
         if (result.length == 0) {
             res.status(404).json({
