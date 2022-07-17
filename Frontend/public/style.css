@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.headingStyle {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.allCard {
+    display: inline-flexbox;
+    background-color: green;
+}
+
+.card {
+    background-color: #ffda77;
+    box-shadow: 2px 4px 4px gray;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 97%;
+    display: block;
+}
+
+.cardTitle {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cardDescr {
+    text-align: justify;
+    padding: 10px;
+    margin: 0 20px 5px 20px;
+}
+
+.formDiv {
+    width: auto;
+    margin: 10px 30% 0 30%;
+    padding: 10px;
+    background-color: #ffda77;
+    box-shadow: 2px 4px 4px gray;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.loginStyle {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-div {
+    display: flex;
+    margin-left: 10px;
+}
+
+.sidemenuLeft {
+    width: 20%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    box-shadow: 2px 4px 4px gray;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.sidemenuRight {
+    width: 25%;
+    padding: 10px;
+    box-shadow: 2px 4px 4px gray;
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+}
+
+.content {
+    width: 50%;
+    padding: 10px;
+    box-shadow: 2px 4px 4px gray;
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.titleTextArea {
+    width: 40%;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.contentTextArea {
+    width: 70%;
+    height: 120px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.createPost{
+    background-color: #037bfc;
+    color: white;
+    width: 105px;
+}
+.createPostElement{
+    padding: 2px 4px;
+}
+
+.editProfileButton{
+    background-color: white; 
+    color: black; 
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+.postButton{
+    background-color: #037bfc; 
+    color: white; 
+    border: none;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+    border-radius: 3px;
+}
+
+.editPostButton{
+    background-color: white; 
+    color: black; 
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+.deletePostButton{
+    background-color: #e64c4c; 
+    color: white; 
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+/* .topMenu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #777;
+}
+.topmenu li {
+    float: left;
+}
+.topmenu li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.topmenu li a:hover{
+    background-color: #222;
+}
+.topmenu li a.active{
+    background-color: red;
+} */
